@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
 import { NewsComponent } from './news/news.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AdtobePipe } from './adtobe.pipe';
+import { RegisterComponent } from './register/register.component'
 
 @NgModule({
   declarations: [
@@ -23,10 +25,12 @@ import { AdtobePipe } from './adtobe.pipe';
     ProductDetailComponent,
     NewsComponent,
     PagenotfoundComponent,
-    AdtobePipe
+    AdtobePipe,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     AppRoutingModule
   ],

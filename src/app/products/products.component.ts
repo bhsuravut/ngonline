@@ -10,6 +10,8 @@ import { Product } from './shared/product.model';
 export class ProductsComponent implements OnInit {
   products: Product[];
 
+  test: 'helle';
+
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
