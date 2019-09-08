@@ -1,0 +1,25 @@
+<p>product-detail works! {{id}}</p>
+
+
+<br><h1>{{ title }}</h1>
+<a class="btn btn-primary" [routerLink]="['/product']">Return</a>
+<section class="container">
+
+  <div class="row">
+    <div class="col-lg-12">
+
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let d of productDetail">
+              <div class="float-md-left">
+                {{ d.ch_title }}
+              </div>
+              <div class="float-md-right">
+                Date: {{ d.ch_dateadd }}
+              </div>
+            </li>
+          </ul>
+
+    </div>
+  </div>
+
+</section>

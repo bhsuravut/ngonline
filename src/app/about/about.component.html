@@ -1,0 +1,43 @@
+
+<section class="container">
+
+<div class="row">
+<div class="col-lg-12">
+
+  <h3 [ngStyle]="{color: 'blue', backgroundColor: myColor}">{{title}}</h3>
+
+  <p [ngClass]='{title: isCssActive}'>Age: {{age}} Years<br>{{info.email}}</p>
+
+  <button type="button" class="btn btn-primary" (click)="go()">Click Me!</button>
+  <br>
+  <img *ngIf='isShow' [src]="logo" [width]="imgWidth">
+
+  <br>
+
+  <table class="table table-bordered">
+<tr>
+    <th>No</th>
+    <th>Course</th>
+    <th>Price</th>
+</tr>
+<tr *ngFor="let c of courses; let i=index">
+    <td>
+        {{i + 1}}
+      </td>
+      <td>
+          {{c.name}}
+        </td>
+        <td>
+  {{c.price}}
+</td>
+</tr>
+  </table>
+
+<ul>
+  <li *ngFor='let u of users'> {{u}} </li>
+</ul>
+
+</div>
+</div>
+
+</section>

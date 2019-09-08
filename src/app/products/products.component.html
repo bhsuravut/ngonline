@@ -1,0 +1,38 @@
+<p>products works!</p>
+
+<section class="container">
+  <div class="row">
+    <div class="col-lg-12">
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Course</th>
+                <th scope="col">Date</th>
+                <th scope="col">Viewver</th>
+                <th scope="col">Tool</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr *ngFor="let p of products">
+                <th scope="row">{{ p.id }}</th>
+                <td>{{p.c_title}}</td>
+                <td>{{p.c_date}}</td>
+                <td>{{p.c_view | number:0}}</td>
+                <td>
+                  <a [routerLink]="[p.id, p.c_title]">
+                    <i class="fas fa-eye"></i>
+                  </a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+    </div>
+
+  </div>
+
+</section>
